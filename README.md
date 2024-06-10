@@ -1,42 +1,40 @@
-# School Schedule CRUD
+# School Schedule CRUD Project
 
-Este proyecto es un ejemplo de una aplicación CRUD simple para gestionar horarios escolares utilizando Motoko y desplegada en el Internet Computer.
+Este es un proyecto básico de CRUD para gestionar horarios escolares utilizando Motoko para el backend y HTML/CSS y JavaScript puro para el frontend. No se utiliza React en este proyecto.
 
-## Estructura del Proyecto
+## Requisitos
 
-- `src/Schedule.mo`: Contiene el modelo y la lógica CRUD para los horarios escolares.
-- `src/Main.mo`: Contiene el actor principal que instancia el actor de `Schedule`.
+- [SDK de DFINITY](https://sdk.dfinity.org/)
+- [Node.js](https://nodejs.org/)
 
-## Comandos para Desplegar
+## Configuración del Entorno de Desarrollo
 
-```bash
-dfx start --background
-dfx deploy
+1. **Instalar el SDK de DFINITY**:
+   ```sh
+   sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
 
-## Comandos para Desplegar
+## Estructura del Proyecto 
+school_schedule/
+├── src/
+│   ├── school_schedule/
+│   │   ├── main.mo
+│   │   ├── assets/
+│   │   │   ├── index.html
+│   │   │   ├── styles.css
+│   │   │   └── script.js
+├── dfx.json
+└── README.md
 
-"Añadir una entrada" 
-dfx canister call schedule addEntry '(record {id = 1; course = "Matemáticas"; day = "Lunes"; startTime = "08:00"; endTime = "10:00"})'
+## Descripción de Archivos
 
-"Listar todas las entradas"
-dfx canister call schedule listEntries
+main.mo: Contiene la lógica del backend escrita en Motoko.
+index.html: Archivo HTML para la interfaz de usuario.
+styles.css: Archivo CSS para los estilos de la interfaz de usuario.
+script.js: Archivo JavaScript para la lógica del frontend.
 
-"Obtener una entrada por ID"
-dfx canister call schedule getEntry '(1)'
+## Funcionalidades
 
-"Actualizar una entrada"
-dfx canister call schedule updateEntry '(record {id = 1; course = "Física"; day = "Lunes"; startTime = "08:00"; endTime = "10:00"})'
-
-"Eliminar una entrada"
-dfx canister call schedule deleteEntry '(1)'
-
-
-## 4. Desplegar y Probar
-
-1. Inicia el entorno de desarrollo local de Internet Computer:
-   ```bash
-   dfx start --background
-
-
-"Despliega tu proyecto"
-dfx deploy
+Crear Horarios: Añadir nuevos horarios escolares.
+Leer Horarios: Ver la lista de horarios existentes.
+Actualizar Horarios: (Funcionalidad no implementada en este ejemplo, pero puede añadirse).
+Borrar Horarios: Eliminar horarios existentes.

@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#schedule-form {
+    margin-bottom: 20px;
+}
+
+#schedule-list {
+    margin-top: 20px;
+}
+
+.schedule-item {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}

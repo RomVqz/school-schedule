@@ -1,16 +1,19 @@
 {
-    "canisters": {
-      "schedule": {
-        "main": "src/Main.mo",
-        "type": "motoko"
-      }
+  "canisters": {
+    "schedule": {
+      "main": "src/school_schedule/main.mo",
+      "type": "motoko"
     },
-    "networks": {
-      "local": {
-        "bind": "127.0.0.1:8000",
-        "type": "ephemeral"
-      }
-    },
-    "version": 0
-  }
-  
+    "assets": {
+      "source": ["src/school_schedule/assets"],
+      "type": "assets"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
